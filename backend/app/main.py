@@ -64,6 +64,11 @@ app = FastAPI(
     lifespan=lifespan
 )
 
+origins = [
+    "http://localhost:3000",
+    "https://your-vercel-project-name.vercel.app",
+]
+
 # CORS
 app.add_middleware(
     CORSMiddleware,
